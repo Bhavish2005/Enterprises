@@ -8,11 +8,21 @@ const close=document.querySelector('.icon-close');
 const userList = [{
     email: "abc@gmail.com",
     password:"123456",
-    role:"Admin"
+    role:"User"
 },{
     email: "def@gmail.com",
     password:"456789",
     role:"User"
+}];
+
+const adminList = [{
+    email: "ghi@gmail.com",
+    password:"123456",
+    role:"Admin"
+},{
+    email: "jkl@gmail.com",
+    password:"456789",
+    role:"Admin"
 }];
 
 
@@ -59,25 +69,45 @@ const authenticateUser = () =>{
         role:inputRole
     };
     var flag= false;
-    for(var i=0;i<userList.length;i++)
-    {
-      if(userList[i].email==inputCredentials.email)
-      {
-        if(userList[i].password==inputCredentials.password)
+    if(inputCredentials.role=="Admin") {
+        for(var i=0;i<userList.length;i++)
         {
-            alert("authentication successful");
+            if(adminList[i].email==inputCredentials.email){
+                if(adminList[i].password==inputCredentials.password)
+                {
+                    alert("authentication successful");
+                }
+                else{
+                    alert("Incorrect Password");
+        
+                }
+                flag=true;
+                break;
+            }
         }
-        else{
-            alert("Incorrect Password");
-
+        if(!flag) {
+            alert("Admin doesn't Exists");
         }
-        flag=true;
-        break;
-      }
-
     }
-    if(!flag) {
-        alert("User doesn't Exists");
+    else{
+        for(var i=0;i<userList.length;i++)
+        {
+            if(userList[i].email==inputCredentials.email)
+            {
+                if(userList[i].password==inputCredentials.password)
+                {
+                    alert("authentication successful");
+                }
+                else{
+                    alert("Incorrect Password");
+                }
+            flag=true;
+            break;
+            }
+        }
+        if(!flag) {
+            alert("User doesn't Exists");
+        }
     }
-    
 }
+    
