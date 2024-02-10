@@ -122,8 +122,20 @@ const registerUser=()=>{
     };
     if(registerValues.role=="Admin")
     {
-  adminList.push(registerValues);
-  alert( " Admin added successfully");
+        var flag =  false;
+        for(var i=0;i<adminList.length;i++){
+            if(registerValues.email === adminList[i].email){
+                flag = true;
+                break;
+            }     
+        }if(flag){
+            alert("Duplicate registration not allowed");
+        }else{
+            adminList.push(registerValues);
+            alert( " Admin added successfully");
+        }
+         
+        
     }
     else{
         userList.push(registerValues);
