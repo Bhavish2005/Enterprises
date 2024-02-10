@@ -110,4 +110,27 @@ const authenticateUser = () =>{
         }
     }
 }
+const registerUser=()=>{
+    const inputOfficer=document.querySelector(".role").value;
+    const inputEmails=document.querySelector(".email").value;
+    const inputPasswords=document.querySelector(".password").value;
+    const registerValues={
+         email:inputEmails,
+        role:inputOfficer,
+        password:inputPasswords
+
+    };
+    if(registerValues.role=="Admin")
+    {
+  adminList.push(registerValues);
+  alert( " Admin added successfully");
+    }
+    else{
+        userList.push(registerValues);
+        alert("User Added Successfully");
+    }
+    console.log(adminList);
+    console.log(userList);
+     
+}
     
