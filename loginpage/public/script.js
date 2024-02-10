@@ -138,8 +138,18 @@ const registerUser=()=>{
         
     }
     else{
-        userList.push(registerValues);
-        alert("User Added Successfully");
+        var flag =  false;
+        for(var i=0;i<userList.length;i++){
+            if(registerValues.email === userList[i].email){
+                flag = true;
+                break;
+            }     
+        }if(flag){
+            alert("Duplicate registration not allowed");
+        }else{
+            userList.push(registerValues);
+            alert( " User added successfully");
+        }
     }
     console.log(adminList);
     console.log(userList);
