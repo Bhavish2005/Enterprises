@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style2.css">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="style3.css">
 </head>
 <body>
     <header>
         <h2 class="enterprises">Enterprises</h2>
         <nav class="navigation">
-            <a class="hideonScreen" href="#">Home</a>
+            <a class="hideonScreen" href="/">Home</a>
             <a class="hideonScreen"href="#">About</a>
             <a class="hideonScreen" href="#">Service</a>
             <a class="hideonScreen"href="/ContactUs">Contact</a>
@@ -18,7 +18,7 @@
             <a  onclick=showSidebar() class="hideonMobile" href="#"><ion-icon name="menu-outline"></ion-icon></a>
             <ul class="sidebar">
                 <li onclick="hideSidebar()"><ion-icon name="close"></ion-icon></li>
-            <li><a  class="abc">Home</a></li>
+            <li><a  class="abc" href="/">Home</a></li>
             <li><a class="abc" href="">About</a></li>
             <li><a class="abc" href="">Service</a></li>
             <li><a class="abc" href="/ContactUs">Contact</a></li>
@@ -28,7 +28,18 @@
            
         </nav>
     </header>
-    
+    <div class="ContactUS">
+<form>
+    <h1>Contact Us Form</h1>
+    <input type="text" id="firstName" placeholder="First Name" required>
+    <input type="text" id="lastName" placeholder="Last Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="text" id="mobile" placeholder="Mobile" required>
+    <h4>Type your message here ...</h4>
+    <textarea required></textarea>
+    <input type="submit" value="Send" id="Messagebutton">
+</form>
+    </div>
 </body>
 <script src="script.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

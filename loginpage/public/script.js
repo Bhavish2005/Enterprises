@@ -144,13 +144,15 @@ const registerUser=()=>{
                 flag = true;
                 break;
             }     
-        }if(flag){
+        }
+        if(flag){
             alert("Duplicate registration not allowed");
         }else{
             userList.push(registerValues);
             alert( " User added successfully");
         }
     }
+    
     console.log(adminList);
     console.log(userList);
      

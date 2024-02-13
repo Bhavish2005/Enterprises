@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+    box-sizing: border-box;
+}
+body
+{
+    background-image:url(pexels-sohail-nachiti-807598.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size:cover;
+}
+#greetings
+{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    margin-top:0px;
+text-align: center;
+color: rgb(255, 255, 255);
+font-size: 30px;
+
+}.container{
+    width: 200px;
+    height: 200px;
+    padding-bottom: 650px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);}
+    .container2{
+        width: 200px;
+        position: relative;
+    }
+    .clock{
+        width: 200px;
+        height: 50px;
+        /* background:rgba(235,0,255,0.11); */
+        border-radius: 10px;
+        display:flex;
+        align-items: center;
+    justify-content:center;
+        /* margin-top:70px; */
+    margin-left: 0px; 
+position: absolute;
+/* margin-left: 20%; */
+/* background-color: red; */
+
+/* height: 100px;
+width: 3px; } */
+    }
+        
+    
+   
+.containers{
+    width:100%;
+    min-height:100vh;
+    /* background: linear-gradient(135deg,red,blue); */
+    padding:10px;
+
+} /* styling of main background*/
+/* .container::before{
+    margin-top: 40px;
+    margin-left: 30px;
+    content: '';
+    width:40px;
+    height:30px;
+    background: #f41b75;
+    border-radius: 5px;
+    position:absolute;
+left: -50px;
+top: -50px;
+z-index: -1;
+} */
+/* .container::after{
+   margin-bottom: 650px;
+   margin-right:10px;
+     content: '';
+     width:40px;
+     height:30px;
+    background: #419aff;
+    border-radius: 50%;
+    position:absolute;
+right: -30px;
+bottom:-50px;
+z-index: -1;} */
+.clock span{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-size:30px;
+width:110px;
+display: inline-block;
+text-align: center;
+position: relative;
+color: #fff;
+}
+.clock span::after
+{
+    font-size:16px;
+position: absolute;
+bottom: -5px;
+left: 50%;
+transform: translateX(-50%);
+}
+#hrs::after{
+    content:'HOURS';
+    font-size: 10px;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+#min::after{
+    content:'MIN';
+    font-size: 10px;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+#sec::after{
+    content: 'SEC';
+    font-size: 10px;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+.todo-app{
+    font-family: 'Poppins',sans-serif;
+    font-size: 20px;
+    padding-top: 0px;
+    width:500px;
+    max-width: 540px;
+    background: whitesmoke;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    position: relative;
+}
+.todo-app h2
+{
+    color:#002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo-app h2 img
+{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+.image{
+    width: 150px;
+    height: 160px;
+    margin-top: 20px;
+margin-left: 1100px;
+margin-bottom: 900px;
+}
+.row
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+ border-radius:  30px;
+  padding-left:20px;
+}
+input{
+    flex:1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+button{
+
+border: none;
+outline: none;
+padding:16px 50px;
+background: green;
+color: #fff;
+font-size:16px;
+cursor:pointer;
+border-radius: 40px;
+}
+button:hover{
+    background: linear-gradient(135deg,green,whitesmoke);
+    width: 135px;
+    height: 53px;
+}
+ul li{
+    list-style: none;
+    font-style:17px;
+    padding: 12px 8px 12px 50px;
+    user-select:none;
+    cursor:pointer;
+    position: relative;
+}
+ul li::before{
+    content:'';
+    position: absolute;
+    height: 28px;
+    width:28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top:12px;
+    left:8px;
+}
+ul li.checked{
+    color:#555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(checked.png);
+}
+
+ul li span{
+    position:absolute;
+    right:0;
+    top: 5px;
+    width:40px;
+    height: 40px;
+    font-size:22px;
+    color:#555;
+    line-height:40px;
+    text-align:center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background:#edeef0;
+}

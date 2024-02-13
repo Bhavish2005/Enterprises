@@ -13,6 +13,12 @@ app.get('/register',(req,res) =>{
    app.get('/login',(req,res)=>{
   res.sendFile('C://Users//hp//OneDrive//Desktop//Repositories//Enterprises//loginpage//login.html')
 })
+app.get('/dashboard',(req,res)=>{
+    res.sendFile('C://Users//hp//OneDrive//Desktop//Repositories//Enterprises//loginpage//dashboard.html')
+})
+app.get('/ContactUs',(req,res)=>{
+    res.sendFile("C://Users//hp//OneDrive//Desktop//Repositories//Enterprises//loginpage//contactus.html")
+})
 app.listen(3000);
 
 
